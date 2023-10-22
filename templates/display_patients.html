@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2">
+        {%if patients%}
+        <th>FIRS TNAME</th>
+        <th>LAST NAME</th><th>PATIENT ID</th>
+        <th>DATE OF BIRTH</th>
+        <th>CONTACT NUMBER</th>
+        <th>ADMISSION DATE</th>
+        <th>WARD NUMBER</th>
+        {%for i in patients%}
+        <tr>
+        
+        <td>{{i.first_name}}</td> <td>{{i.last_name}}</td> 
+        <td>{{i.patient_id}}</td>
+        <td>{{i.date_of_birth}}</td>
+        <td>{{i.contact_number}}</td>
+        <td>{{i.admission_date}}</td>
+        <td>{{i.ward_number}}</td>
+        </tr>
+        {%endfor%}
+        {%endif%} 
+</body>
+</html>
